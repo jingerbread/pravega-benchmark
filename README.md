@@ -35,8 +35,12 @@ Build the Pravega benchmark Tool:
 ./gradlew build
 ```
 
-untar the Pravega benchmark tool to local folder
+unzip or untar the Pravega benchmark tool to local folder
 
+```
+unzip -q build/distributions/pravega-benchmark.zip  -d /opt/
+cd /opt/pravega-benchmark/
+```
 ```
 tar -xvf ./build/distributions/pravega-benchmark.tar -C ./run
 ```
@@ -92,6 +96,9 @@ usage: pravega-benchmark
                                      If >= 0 and using transactions,
                                      watermarks will be written on each
                                      commit.
+
+# Run test 1 segment 100b 1 min
+./bin/pravega-benchmark  -controller tcp://10.0.0.103:9090  -stream streamname1  -segments 1  -producers 1   -size 100  -throughput -1 -time 60
 ```
 ## Running Performance benchmarking
 
