@@ -150,7 +150,7 @@ public class PravegaPerfTest {
                     }
                 }
             });
-            perfTest.start(System.currentTimeMillis());
+            perfTest.start(System.currentTimeMillis());//System.nanoTime()
             executor.invokeAll(workers);
             executor.shutdown();
             executor.awaitTermination(1, TimeUnit.SECONDS);

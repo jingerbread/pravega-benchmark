@@ -93,7 +93,7 @@ public class PerfStats {
         final private static int MICROS_PER_MS = 1000;
         final private static int NS_PER_MS = NS_PER_MICRO * MICROS_PER_MS;
         final private static int PARK_NS = NS_PER_MICRO;
-        final private long startTime;
+        final private long startTime; // nanoTime()
         final TimeWindow window;
         CSVThroughputWriter throughputRecorder;
 
